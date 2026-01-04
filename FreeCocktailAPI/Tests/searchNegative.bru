@@ -1,0 +1,17 @@
+meta {
+  name: searchNegative
+  type: http
+}
+
+get {
+  url: {{baseUrlFreeCocktail}}/search.php?s=asdjkhqweqwe
+}
+
+tests {
+  const helper = require('./Helpers/helper.js');
+  const body = res.getBody();
+
+  test("response should return no drinks", function () {
+    helper.searchNegative_assertNoResults(body);
+  });
+}

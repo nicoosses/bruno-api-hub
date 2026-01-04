@@ -1,0 +1,21 @@
+meta {
+  name: lookupById
+  type: http
+}
+
+get {
+  url: {{baseUrlFreeCocktail}}/lookup.php?i=11007
+}
+
+tests {
+  const helper = require('./Helpers/helper.js');
+  const body = res.getBody();
+
+  test("should return exactly one drink", function () {
+    helper.lookupById_assertSingleResult(body);
+  });
+
+  test("drink should contain idDrink field", function () {
+    helper.lookupById_assertHasIdDrink(body);
+  });
+}

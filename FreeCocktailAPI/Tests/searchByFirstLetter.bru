@@ -1,0 +1,21 @@
+meta {
+  name: searchByFirstLetter
+  type: http
+}
+
+get {
+  url: {{baseUrlFreeCocktail}}/search.php?f=a
+}
+
+tests {
+  const helper = require('./Helpers/helper.js');
+  const body = res.getBody();
+
+  test("response should have drinks array", function () {
+    helper.searchByFirstLetter_assertHasResults(body);
+  });
+
+  test("drinks array should have at least 3 elements", function () {
+    helper.searchByFirstLetter_assertMinResults(body, 3);
+  });
+}
