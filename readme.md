@@ -1,4 +1,5 @@
 # API Test Automation Hub with Bruno + TeamCity (CI/CD)
+![CI Status](http://localhost:8111/app/rest/builds/buildType:id:BrunoApiHub_FreeCocktailAPI/statusIcon.svg)
 
 ## Executive Summary
 
