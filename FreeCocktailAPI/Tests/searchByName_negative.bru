@@ -1,0 +1,27 @@
+meta {
+  name: searchByName_negative
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrlFreeCocktail}}/search.php?s=zzzzzzzzzzzz
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+tests {
+  test("status should be 200", function () {
+    expect(res.getStatus()).to.eql(200);
+  });
+
+  test("drinks should be null when no results", function () {
+    const body = res.getBody();
+    expect(body).to.have.property("drinks");
+    expect(body.drinks).to.equal(null);
+  });
+}

@@ -1,0 +1,23 @@
+{
+  "version": "1",
+  "type": "collection",
+  "name": "[Root folder name]",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "folders": [
+    {
+      "name": "Tests",
+      "path": "Tests"
+    },
+    {
+      "name": "Regression-CI",
+      "path": "Regression-CI"
+    },
+    {
+      "name": "Helpers",
+      "path": "Helpers"
+    }
+  ]
+}
