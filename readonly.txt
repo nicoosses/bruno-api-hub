@@ -1,0 +1,4 @@
+cd ~/Documents/TeamCity
+./bin/runAll.sh start
+
+http://localhost:8111/login.html

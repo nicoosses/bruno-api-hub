@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bru:freecocktail": "bru run FreeCocktailAPI/Tests --env dev"
+    "bru:freecocktail": "bru run FreeCocktailAPI/Tests --env dev --reporter html --output reports",
+    "bru:freecocktail:html": "bru run --reporter-html reports/results.html FreeCocktailAPI/Tests --env dev"
+
   },
   "repository": {
     "type": "git",
