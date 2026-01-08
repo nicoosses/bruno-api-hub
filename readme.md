@@ -53,5 +53,9 @@ This repository reflects **real‑world QA automation practices**, emphasizing c
 <img width="1397" height="609" alt="image" src="https://github.com/user-attachments/assets/1c7b8163-10f4-464f-a7bf-119c5fdf50d0" />
 
 <img width="1463" height="784" alt="image" src="https://github.com/user-attachments/assets/4407f96b-b1cc-4dfc-adb7-19e6ca586cd2" />
+
 <img width="1434" height="812" alt="image" src="https://github.com/user-attachments/assets/33a264a7-c6c7-45e9-87d3-259c4e7f7fe5" />
+
+<img width="1447" height="727" alt="image" src="https://github.com/user-attachments/assets/f4028bcc-d8ee-4904-aa38-b77aa6680d5e" />
+
 
