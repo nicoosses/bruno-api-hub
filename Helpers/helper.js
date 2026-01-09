@@ -121,12 +121,6 @@ function randomCocktail_assertHasAtLeastOneIngredient(body) {
    popularCocktails assertions
 ============================ */
 
-function popularCocktails_assertHasResults(body) {
-  if (!Array.isArray(body.drinks) || body.drinks.length === 0) {
-    throw new Error("Expected popular cocktails list");
-  }
-}
-
 /* ============================
    latestCocktails assertions
 ============================ */
