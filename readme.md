@@ -50,12 +50,15 @@ This repository reflects **real‑world QA automation practices**, emphasizing c
 
 ### Teamcity Integration
 
-<img width="1397" height="609" alt="image" src="https://github.com/user-attachments/assets/1c7b8163-10f4-464f-a7bf-119c5fdf50d0" />
+<img width="1383" height="426" alt="image" src="https://github.com/user-attachments/assets/b6ae2977-3efb-44b5-b69c-d8ff0c902db8" />
 
-<img width="1463" height="784" alt="image" src="https://github.com/user-attachments/assets/4407f96b-b1cc-4dfc-adb7-19e6ca586cd2" />
+<img width="1396" height="530" alt="image" src="https://github.com/user-attachments/assets/19d43273-e238-4b86-ad05-054c56e6a79c" />
 
-<img width="1434" height="812" alt="image" src="https://github.com/user-attachments/assets/33a264a7-c6c7-45e9-87d3-259c4e7f7fe5" />
+<img width="1401" height="789" alt="image" src="https://github.com/user-attachments/assets/c89b21ea-feb2-44dd-a50d-4e84cadadf66" />
 
-<img width="1447" height="727" alt="image" src="https://github.com/user-attachments/assets/f4028bcc-d8ee-4904-aa38-b77aa6680d5e" />
+<img width="1393" height="435" alt="image" src="https://github.com/user-attachments/assets/681f5417-bce3-44c2-a066-3068dd54e5d6" />
 
+<img width="1397" height="697" alt="image" src="https://github.com/user-attachments/assets/15594784-1e99-4b5d-9e98-7c611f350348" />
+
+<img width="1400" height="814" alt="image" src="https://github.com/user-attachments/assets/29b5188b-50e6-4035-93f4-050c7184df6b" />
 
