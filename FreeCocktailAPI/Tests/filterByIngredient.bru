@@ -1,20 +1,27 @@
 meta {
   name: filterByIngredient
   type: http
+  seq: 1
 }
 
 get {
   url: {{baseUrlFreeCocktail}}/filter.php?i=Gin
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  baseUrlFreeCocktail: https://www.thecocktaildb.com/api/json/v1/1
 }
 
 tests {
   const helper = require('./Helpers/helper.js');
   const body = res.getBody();
-
+  
   test("response should have drinks array", function () {
     helper.filterByIngredient_assertHasResults(body);
   });
-
+  
   test("drinks array should have at least 5 elements", function () {
     helper.filterByIngredient_assertMinResults(body, 5);
   });

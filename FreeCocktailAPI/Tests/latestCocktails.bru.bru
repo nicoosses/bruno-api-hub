@@ -1,0 +1,25 @@
+meta {
+  name: searchLatest
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrlFreeCocktail}}/latest.php
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  baseUrlFreeCocktail: https://www.thecocktaildb.com/api/json/v1/1
+}
+
+tests {
+  const helper = require('./Helpers/helper.js');
+  const body = res.getBody();
+
+  test("status should be 200", function () {
+    expect(res.getStatus()).to.eql(200);
+  });
+
+}

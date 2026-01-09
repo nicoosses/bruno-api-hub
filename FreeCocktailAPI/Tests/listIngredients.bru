@@ -1,0 +1,36 @@
+meta {
+  name: listIngredients
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrlFreeCocktail}}/list.php?i=list
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  baseUrlFreeCocktail: https://www.thecocktaildb.com/api/json/v1/1
+}
+
+tests {
+  const helper = require('./Helpers/helper.js');
+  const body = res.getBody();
+
+  test("status should be 200", function () {
+    expect(res.getStatus()).to.eql(200);
+  });
+
+  test("drinks should be an array", function () {
+    helper.listIngredients_assertDrinksIsArray(body);
+  });
+
+  test("each item should have strIngredient1", function () {
+    helper.listIngredients_assertHasStrIngredient(body);
+  });
+
+  test("ingredients list should contain Coffee", function () {
+    helper.listIngredients_assertContainsCoffee(body);
+  });
+}

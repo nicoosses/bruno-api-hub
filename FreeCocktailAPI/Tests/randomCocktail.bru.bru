@@ -1,0 +1,41 @@
+meta {
+  name: randomCocktail
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrlFreeCocktail}}/random.php
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  baseUrlFreeCocktail: https://www.thecocktaildb.com/api/json/v1/1
+}
+
+
+tests {
+  const helper = require('./Helpers/helper.js');
+  const body = res.getBody();
+
+  test("status should be 200", function () {
+    expect(res.getStatus()).to.eql(200);
+  });
+
+    test("should return one random drink", function () {
+    helper.randomCocktail_assertSingleDrink(body);
+  });
+
+  test("required fields should exist", function () {
+    helper.randomCocktail_assertRequiredFieldsExist(body);
+  });
+
+  test("should contain alcoholic attribute", function () {
+    helper.randomCocktail_assertHasAlcoholicAttribute(body);
+  });
+
+  test("should contain at least one ingredient", function () {
+    helper.randomCocktail_assertHasAtLeastOneIngredient(body);
+  });
+}
