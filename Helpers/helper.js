@@ -68,6 +68,28 @@ function filterByIngredient_assertMinResults(body, min) {
   }
 }
 
+
+function filterByIngredient_assertItemHasRequiredAttributes(body) {
+  const drink = body.drinks[0];
+
+  if (!drink.idDrink || !drink.strDrink || !drink.strDrinkThumb) {
+    throw new Error(
+      "Expected each drink to have idDrink, strDrink and strDrinkThumb"
+    );
+  }
+}
+
+function filterByIngredient_assertAllItemsHaveSameShape(body) {
+  const keys = Object.keys(body.drinks[0]);
+
+  const sameShape = body.drinks.every(drink =>
+    keys.every(key => drink.hasOwnProperty(key))
+  );
+
+  if (!sameShape) {
+    throw new Error("Expected all drinks to have the same response shape");
+  }
+}
 /* ============================
    negative search assertions
 ============================ */
@@ -182,9 +204,10 @@ module.exports = {
   lookupById_assertHasIdDrink,
   filterByIngredient_assertHasResults,
   filterByIngredient_assertMinResults,
+  filterByIngredient_assertItemHasRequiredAttributes,
+  filterByIngredient_assertAllItemsHaveSameShape,
   searchNegative_assertNoResults,
   randomCocktail_assertSingleDrink,
-  popularCocktails_assertHasResults,
   latestCocktails_assertHasResults,
   listIngredients_assertHasList,
   listIngredients_assertDrinksIsArray,

@@ -25,4 +25,12 @@ tests {
   test("drinks array should have at least 5 elements", function () {
     helper.filterByIngredient_assertMinResults(body, 5);
   });
+
+    test("each item should have required attributes", function () {
+    helper.filterByIngredient_assertItemHasRequiredAttributes(body);
+  });
+
+  test("all items should have same response shape", function () {
+    helper.filterByIngredient_assertAllItemsHaveSameShape(body);
+  });
 }
